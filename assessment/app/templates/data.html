@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+    <h1>Record of Stored Data </h1>
+    <ol>
+        {% for record in records %}
+        <li >
+            <h4>Name  :   {{record.name}} </h4>
+            <h4>Email :   {{record.email}} </h4>
+        </li>
+        {% endfor %}
+    </ol>
+</main>
+{% endblock %}

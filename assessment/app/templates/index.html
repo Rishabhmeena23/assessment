@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main>
+        <section>
+            <h2>Main Content</h2>
+            <p>Current Time : {{time}}</p>
+            <p>This is a simple web page created as part of the intern project. This section contains the main content.</p>
+        </section>
+        <div class="container">
+            <form method="POST" action="/submit/">
+                {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </main>
+{% endblock %}
